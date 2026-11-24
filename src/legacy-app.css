@@ -1,0 +1,20 @@
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  min-width: 320px;
+  overflow: hidden;
+}
+
+.legacy-site {
+  display: block;
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  border: 0;
+}

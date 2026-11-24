@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedFlow — Premium Tibbiy Navbat Tizimi</title>
+    <meta name="description" content="MedFlow - zamonaviy tibbiyot markazlari uchun onlayn navbat boshqaruv tizimi">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+
+        
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <i data-lucide="stethoscope"></i>
+            </div>
+            <div class="preloader-text">MedFlow</div>
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Section -->
+    <section id="auth-section" class="auth-container">
+        <div class="auth-bg-effects">
+            <div class="bg-blob blob-1"></div>
+            <div class="bg-blob blob-2"></div>
+            <div class="bg-blob blob-3"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"><i data-lucide="heart-pulse"></i></div>
+                <div class="shape shape-2"><i data-lucide="activity"></i></div>
+                <div class="shape shape-3"><i data-lucide="shield-check"></i></div>
+                <div class="shape shape-4"><i data-lucide="brain"></i></div>
+            </div>
+        </div>
+        
+        <div class="auth-card" data-aos="zoom-in" data-aos-duration="800">
+            <div class="auth-logo">
+                <div class="logo-icon pulse-animation">
+                    <i data-lucide="stethoscope"></i>
+                </div>
+                <h1 class="logo-text">MedFlow</h1>
+                <p class="logo-subtitle">Premium tibbiy navbat tizimi</p>
+            </div>
+            
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Kirish</button>
+                <button class="auth-tab" data-tab="register">Ro'yxatdan o'tish</button>
+            </div>
+            
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form active">
+                <div class="form-group">
+                    <label>Telefon raqam</label>
+                    <div class="input-wrapper">
+                        <i data-lucide="phone" class="input-icon"></i>
+                        <input type="tel" placeholder="+998 90 123 45 67" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Parol</label>
+                    <div class="input-wrapper">
+                        <i data-lucide="shield" class="input-icon"></i>
+                        <input type="password" placeholder="••••••••" required>
+                        <button type="button" class="toggle-password">
+                            <i data-lucide="eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                        <span class="checkbox-text">Meni eslab qol</span>
+                    </label>
+                    <a href="#" class="forgot-link">Parolni unutdingiz?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full btn-glow">
+                    <span class="btn-text">Kirish</span>
+                    <i data-lucide="arrow-right" class="btn-icon"></i>
+                </button>
+            </form>
+            
+            <!-- Register Form -->
+            <form id="register-form" class="auth-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Ism</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="user" class="input-icon"></i>
+                            <input type="text" placeholder="Ism" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Familiya</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="user" class="input-icon"></i>
+                            <input type="text" placeholder="Familiya" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Telefon raqam</label>
+                    <div class="input-wrapper">
+                        <i data-lucide="phone" class="input-icon"></i>
+                        <input type="tel" placeholder="+998 90 123 45 67" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <div class="input-wrapper">
+                        <i data-lucide="mail" class="input-icon"></i>
+                        <input type="email" placeholder="email@example.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Parol</label>
+                    <div class="input-wrapper">
+                        <i data-lucide="shield" class="input-icon"></i>
+                        <input type="password" placeholder="••••••••" required>
+                        <button type="button" class="toggle-password">
+                            <i data-lucide="eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Parolni tasdiqlang</label>
+                    <div class="input-wrapper">
+                        <i data-lucide="shield-check" class="input-icon"></i>
+                        <input type="password" placeholder="••••••••" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full btn-glow">
+                    <span class="btn-text">Ro'yxatdan o'tish</span>
+                    <i data-lucide="arrow-right" class="btn-icon"></i>
+                </button>
+            </form>
+            
+            <div class="auth-divider">
+                <span>yoki</span>
+            </div>
+            
+            <div class="social-login">
+                <button class="btn-social google">
+                    <svg viewBox="0 0 24 24"><path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="currentColor" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                    Google orqali
+                </button>
+                <button class="btn-social telegram">
+                    <svg viewBox="0 0 24 24"><path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    Telegram orqali
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main App -->
+    <div id="app" class="hidden">
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="nav-brand" onclick="navigateTo('home')">
+            <div class="logo-icon small">
+                <i data-lucide="stethoscope"></i>
+            </div>
+            <span class="brand-text">MedFlow</span>
+        </div>
+        
+        <div class="nav-links">
+            <a href="#home" class="nav-link active" data-page="home">
+                <i data-lucide="home"></i>
+                <span>Bosh sahifa</span>
+            </a>
+            <a href="#specialties" class="nav-link" data-page="specialties">
+                <i data-lucide="stethoscope"></i>
+                <span>Mutaxassislar</span>
+            </a>
+            <a href="#doctors" class="nav-link" data-page="doctors">
+                <i data-lucide="users"></i>
+                <span>Shifokorlar</span>
+            </a>
+            <a href="#contact" class="nav-link" data-page="contact">
+                <i data-lucide="message-circle"></i>
+                <span>Aloqa</span>
+            </a>
+        </div>
+        
+        <div class="nav-search">
+            <i data-lucide="search" class="search-icon"></i>
+            <input type="text" id="search-input" placeholder="Shifokor yoki mutaxassislik qidirish...">
+            <div class="search-results" id="search-results"></div>
+        </div>
+        
+        <div class="nav-actions">
+            <button id="theme-toggle" class="btn-icon-only" title="Mavzu almashtirish">
+                <i data-lucide="sun" class="icon-sun"></i>
+                <i data-lucide="moon" class="icon-moon hidden"></i>
+            </button>
+            <button id="notifications-btn" class="btn-icon-only" title="Bildirishnomalar" onclick="showNotifications()">
+                <i data-lucide="bell"></i>
+                <span class="notification-badge">3</span>
+            </button>
+            <div class="user-menu-wrapper">
+                <div class="user-badge" id="user-menu-trigger">
+                    <div class="user-avatar">
+                        <span id="user-initial">F</span>
+                    </div>
+                    <span id="user-name">Foydalanuvchi</span>
+                    <i data-lucide="chevron-down" class="dropdown-icon"></i>
+                </div>
+                <!-- YANGILANGAN DROPDOWN MENYU -->
+                <div class="user-dropdown hidden" id="user-dropdown">
+                    <!-- User Header -->
+                    <div class="dropdown-header">
+                        <div class="user-avatar large">
+                            <span id="dropdown-initial">F</span>
+                        </div>
+                        <div class="dropdown-user-info">
+                            <span class="dropdown-name" id="dropdown-name">Foydalanuvchi</span>
+                            <span class="dropdown-phone" id="dropdown-phone">+998 90 123 45 67</span>
+                            <span class="dropdown-status">
+                                <i data-lucide="shield-check"></i>
+                                Tasdiqlangan foydalanuvchi
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown-divider"></div>
+                    
+                    <!-- Asosiy menyular -->
+                    <a href="#" class="dropdown-item" onclick="openUserModal('profile'); return false;">
+                        <div class="dropdown-item-icon blue">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="dropdown-item-info">
+                            <span class="item-title">Profilim</span>
+                            <span class="item-desc">Shaxsiy ma'lumotlar</span>
+                        </div>
+                        <i data-lucide="chevron-right" class="item-arrow"></i>
+                    </a>
+                    
+                    <a href="#" class="dropdown-item" onclick="openUserModal('appointments'); return false;">
+                        <div class="dropdown-item-icon emerald">
+                            <i data-lucide="calendar"></i>
+                        </div>
+                        <div class="dropdown-item-info">
+                            <span class="item-title">Mening navbatlarim</span>
+                            <span class="item-desc" id="dropdown-appointments-count">2 ta faol navbat</span>
+                        </div>
+                        <span class="item-badge" id="nav-appointment-badge">2</span>
+                    </a>
+                    
+                    <a href="#" class="dropdown-item" onclick="openUserModal('history'); return false;">
+                        <div class="dropdown-item-icon violet">
+                            <i data-lucide="file-text"></i>
+                        </div>
+                        <div class="dropdown-item-info">
+                            <span class="item-title">Tibbiy tarix</span>
+                            <span class="item-desc">Tashriflar va hujjatlar</span>
+                        </div>
+                        <i data-lucide="chevron-right" class="item-arrow"></i>
+                    </a>
+                    
+                    <a href="#" class="dropdown-item" onclick="openUserModal('reviews'); return false;">
+                        <div class="dropdown-item-icon amber">
+                            <i data-lucide="star"></i>
+                        </div>
+                        <div class="dropdown-item-info">
+                            <span class="item-title">Mening sharhlarim</span>
+                            <span class="item-desc" id="dropdown-reviews-count">3 ta sharh</span>
+                        </div>
+                        <i data-lucide="chevron-right" class="item-arrow"></i>
+                    </a>
+                    
+                    <div class="dropdown-divider"></div>
+                    
+                    <!-- Sozlamalar -->
+                    <a href="#" class="dropdown-item" onclick="openUserModal('settings'); return false;">
+                        <div class="dropdown-item-icon slate">
+                            <i data-lucide="settings"></i>
+                        </div>
+                        <div class="dropdown-item-info">
+                            <span class="item-title">Sozlamalar</span>
+                            <span class="item-desc">Mavzu va bildirishnomalar</span>
+                        </div>
+                        <i data-lucide="chevron-right" class="item-arrow"></i>
+                    </a>
+                    
+                    <a href="#" class="dropdown-item" onclick="openUserModal('help'); return false;">
+                        <div class="dropdown-item-icon cyan">
+                            <i data-lucide="help-circle"></i>
+                        </div>
+                        <div class="dropdown-item-info">
+                            <span class="item-title">Yordam</span>
+                            <span class="item-desc">Savollar va javoblar</span>
+                        </div>
+                        <i data-lucide="chevron-right" class="item-arrow"></i>
+                    </a>
+                    
+                    <div class="dropdown-divider"></div>
+                    
+                    <!-- Chiqish -->
+                    <a href="#" class="dropdown-item danger" id="logout-btn" onclick="logoutUser(); return false;">
+                        <div class="dropdown-item-icon red">
+                            <i data-lucide="log-out"></i>
+                        </div>
+                        <div class="dropdown-item-info">
+                            <span class="item-title">Tizimdan chiqish</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <button id="mobile-menu-btn" class="btn-icon-only mobile-only">
+            <i data-lucide="menu"></i>
+        </button>
+    </div>
+</nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <div class="mobile-search">
+                <i data-lucide="search"></i>
+                <input type="text" id="mobile-search" placeholder="Qidirish...">
+            </div>
+            <div class="mobile-nav-links">
+                <a href="#home" class="mobile-nav-link active" data-page="home">
+                    <i data-lucide="home"></i>
+                    <span>Bosh sahifa</span>
+                </a>
+                <a href="#specialties" class="mobile-nav-link" data-page="specialties">
+                    <i data-lucide="stethoscope"></i>
+                    <span>Mutaxassislar</span>
+                </a>
+                <a href="#doctors" class="mobile-nav-link" data-page="doctors">
+                    <i data-lucide="users"></i>
+                    <span>Shifokorlar</span>
+                </a>
+                <a href="#contact" class="mobile-nav-link" data-page="contact">
+                    <i data-lucide="message-circle"></i>
+                    <span>Aloqa</span>
+                </a>
+            </div>
+            <div class="mobile-actions">
+                <button id="mobile-theme-toggle" class="btn btn-ghost btn-full">
+                    <i data-lucide="sun"></i>
+                    <span>Mavzu almashtirish</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Home Page -->
+        <div id="page-home" class="page active">
+            <!-- Hero Section -->
+            <section class="hero" id="home">
+                <div class="hero-bg">
+                    <div class="hero-blob blob-1"></div>
+                    <div class="hero-blob blob-2"></div>
+                    <div class="hero-blob blob-3"></div>
+                    <div class="hero-grid"></div>
+                </div>
+                <div class="hero-content">
+                    <div class="hero-badge" data-aos="fade-down" data-aos-delay="100">
+                        <i data-lucide="sparkles"></i>
+                        <span>2026-yil tibbiyot innovatsiyasi</span>
+                    </div>
+                    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                        Navbat kutishni<br>
+                        <span class="gradient-text">unuting</span>
+                    </h1>
+                    <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+                        MedFlow — zamonaviy tibbiyot markazlari uchun aqlli navbat boshqaruv tizimi. 
+                        Vaqt va energiyangizni tejang, shifokorlaringizni onlayn tanlang.
+                    </p>
+                    <div class="hero-features" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-tag">
+                            <div class="tag-icon-wrapper emerald">
+                                <i data-lucide="clock"></i>
+                            </div>
+                            <span>Tez va oson</span>
+                        </div>
+                        <div class="feature-tag">
+                            <div class="tag-icon-wrapper blue">
+                                <i data-lucide="shield-check"></i>
+                            </div>
+                            <span>Xavfsiz ma'lumot</span>
+                        </div>
+                        <div class="feature-tag">
+                            <div class="tag-icon-wrapper amber">
+                                <i data-lucide="bell-ring"></i>
+                            </div>
+                            <span>SMS xabarnomalar</span>
+                        </div>
+                    </div>
+                    <div class="hero-cta" data-aos="fade-up" data-aos-delay="500">
+                        <button class="btn btn-primary btn-lg btn-glow" onclick="scrollToSpecialties()">
+                            <span>Navbat olish</span>
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                        <button class="btn btn-secondary btn-lg" onclick="showVideoModal()">
+                            <i data-lucide="play-circle"></i>
+                            <span>Qanday ishlaydi</span>
+                        </button>
+                    </div>
+                    
+                    <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="5000">0</span>
+                            <span class="stat-label">Faol foydalanuvchi</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="150">0</span>
+                            <span class="stat-label">Shifokorlar</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="50">0</span>
+                            <span class="stat-label">Klinikalar</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="99">0</span>
+                            <span class="stat-label">Mamnunlik %</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Specialties Section -->
+            <section class="specialties-section" id="specialties">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="section-title-group">
+                        <span class="section-subtitle">Mutaxassisliklar</span>
+                        <h2 class="section-title">Kasallik yo'nalishlari</h2>
+                    </div>
+                    <span class="section-count" id="specialty-count">6 ta yo'nalish</span>
+                </div>
+                
+                <div class="specialties-grid" id="specialties-grid">
+                    <!-- Cards generated by JS -->
+                </div>
+                
+                <div id="no-results" class="no-results hidden">
+                    <div class="no-results-icon">
+                        <i data-lucide="search-x"></i>
+                    </div>
+                    <h3>Hech narsa topilmadi</h3>
+                    <p>Boshqa so'z bilan qidirib ko'ring</p>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features-section">
+                <div class="section-header center" data-aos="fade-up">
+                    <span class="section-subtitle">Imkoniyatlar</span>
+                    <h2 class="section-title">Nima uchun MedFlow?</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon-wrapper">
+                            <i data-lucide="smartphone"></i>
+                        </div>
+                        <h3>Qulay ilova</h3>
+                        <p>Telefoningizdan istalgan vaqtda navbat oling va kuzating</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon-wrapper">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <h3>Eng yaqin shifokor</h3>
+                        <p>Joylashuvingizga qarab eng yaqin va eng yaxshi shifokorni toping</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-icon-wrapper">
+                            <i data-lucide="history"></i>
+                        </div>
+                        <h3>Tibbiy tarix</h3>
+                        <p>Barcha tashriflaringiz va tibbiy hujjatlaringiz bir joyda</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-icon-wrapper">
+                            <i data-lucide="message-square"></i>
+                        </div>
+                        <h3>Onlayn maslahat</h3>
+                        <p>Shifokor bilan video qo'ng'iroq orqali maslahat oling</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Doctors Page -->
+        <div id="page-doctors" class="page">
+            <section class="doctors-page-section">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="section-title-group">
+                        <span class="section-subtitle">Barcha shifokorlar</span>
+                        <h2 class="section-title">Shifokorlar katalogi</h2>
+                    </div>
+                    <div class="filter-bar">
+                        <div class="filter-group">
+                            <select id="city-filter" class="filter-select">
+                                <option value="">Barcha shahlar</option>
+                                <option value="toshkent">Toshkent</option>
+                                <option value="samarqand">Samarqand</option>
+                                <option value="buxoro">Buxoro</option>
+                                <option value="andijon">Andijon</option>
+                                <option value="namangan">Namangan</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <select id="specialty-filter" class="filter-select">
+                                <option value="">Barcha mutaxassisliklar</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <select id="rating-filter" class="filter-select">
+                                <option value="">Reyting</option>
+                                <option value="5">5 yulduz</option>
+                                <option value="4">4+ yulduz</option>
+                                <option value="3">3+ yulduz</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="doctors-grid-full" id="doctors-grid-full">
+                    <!-- Generated by JS -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="page-contact" class="page">
+            <section class="contact-section">
+                <div class="contact-container">
+                    <div class="contact-info" data-aos="fade-right">
+                        <span class="section-subtitle">Biz bilan aloqa</span>
+                        <h2 class="section-title">Savollaringiz bormi?</h2>
+                        <p class="contact-desc">Bizga murojaat qiling, tez orada javob beramiz</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="map-pin"></i>
+                                </div>
+                                <div>
+                                    <h4>Manzil</h4>
+                                    <p>Toshkent sh., Chilonzor tumani, Bunyodkor ko'chasi</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="phone"></i>
+                                </div>
+                                <div>
+                                    <h4>Telefon</h4>
+                                    <p>+998 71 200 00 00</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>info@medflow.uz</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="clock"></i>
+                                </div>
+                                <div>
+                                    <h4>Ish vaqti</h4>
+                                    <p>Dushanba - Shanba: 08:00 - 20:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-wrapper" data-aos="fade-left">
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Ismingiz</label>
+                                    <input type="text" placeholder="Ismingiz" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Familiyangiz</label>
+                                    <input type="text" placeholder="Familiyangiz" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" placeholder="email@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Mavzu</label>
+                                <select required>
+                                    <option value="">Mavzu tanlang</option>
+                                    <option value="support">Texnik yordam</option>
+                                    <option value="partnership">Hamkorlik</option>
+                                    <option value="feedback">Fikr-mulohaza</option>
+                                    <option value="other">Boshqa</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Xabar</label>
+                                <textarea rows="5" placeholder="Xabaringizni yozing..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full btn-glow">
+                                <span>Yuborish</span>
+                                <i data-lucide="send"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Specialty Doctors Section (Dynamic) -->
+        <section id="doctors-section" class="doctors-section hidden">
+            <div class="section-header">
+                <button id="back-btn" class="btn btn-secondary btn-sm">
+                    <i data-lucide="arrow-left"></i>
+                    <span>Orqaga</span>
+                </button>
+                <div class="section-title-group">
+                    <span class="section-subtitle" id="specialty-subtitle">Mutaxassislik</span>
+                    <h2 class="section-title" id="specialty-title">Nomi</h2>
+                </div>
+            </div>
+            
+            <div class="doctors-grid" id="doctors-grid">
+                <!-- Doctor cards generated by JS -->
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-brand" data-aos="fade-up" data-aos-delay="100">
+                    <div class="footer-logo">
+                        <div class="logo-icon small">
+                            <i data-lucide="stethoscope"></i>
+                        </div>
+                        <h3>MedFlow</h3>
+                    </div>
+                    <p>Zamonaviy tibbiyot markazlari uchun aqlli navbat boshqaruv tizimi. Sog'lig'ingiz — bizning baxtimiz.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="social-link"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="social-link"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="social-link"><i data-lucide="youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="200">
+                    <h4>Foydali havolalar</h4>
+                    <a href="#" onclick="navigateTo('home')">Bosh sahifa</a>
+                    <a href="#" onclick="navigateTo('specialties')">Mutaxassisliklar</a>
+                    <a href="#" onclick="navigateTo('doctors')">Shifokorlar</a>
+                    <a href="#" onclick="navigateTo('contact')">Aloqa</a>
+                </div>
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="300">
+                    <h4>Xizmatlar</h4>
+                    <a href="#">Shifokorlar uchun</a>
+                    <a href="#">Klinikalar uchun</a>
+                    <a href="#">Diagnostika</a>
+                    <a href="#">Onlayn maslahat</a>
+                </div>
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="400">
+                    <h4>Aloqa</h4>
+                    <p><i data-lucide="phone" class="footer-icon"></i> +998 71 200 00 00</p>
+                    <p><i data-lucide="mail" class="footer-icon"></i> info@medflow.uz</p>
+                    <p><i data-lucide="map-pin" class="footer-icon"></i> Toshkent, O'zbekiston</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 MedFlow. Barcha huquqlar himoyalangan.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Maxfiylik siyosati</a>
+                    <a href="#">Foydalanish shartlari</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+        <!-- Payment Modal -->
+    <div id="payment-modal" class="modal hidden">
+        <div class="modal-overlay" onclick="closePaymentModal()"></div>
+        <div class="modal-content modal-payment">
+            <div class="modal-header payment-header">
+                <button class="modal-close" onclick="closePaymentModal()">
+                    <i data-lucide="x"></i>
+                </button>
+                <div class="payment-header-content">
+                    <div class="payment-icon">
+                        <i data-lucide="credit-card"></i>
+                    </div>
+                    <h3>To'lov</h3>
+                    <p>Navbatni tasdiqlash uchun to'lov</p>
+                </div>
+            </div>
+            
+            <div class="modal-body payment-body">
+                <!-- Order Summary -->
+                <div class="payment-summary">
+                    <div class="summary-row">
+                        <span>Shifokor</span>
+                        <strong id="payment-doctor">Dr. Azizov Bahodir</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span>Mutaxassislik</span>
+                        <strong id="payment-specialty">Kardiologiya</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span>Qabul vaqti</span>
+                        <strong id="payment-time">14:30</strong>
+                    </div>
+                    <div class="summary-divider"></div>
+                    <div class="summary-row total">
+                        <span>Jami</span>
+                        <strong id="payment-amount">150,000 so'm</strong>
+                    </div>
+                </div>
+                
+                <!-- Payment Methods -->
+                <div class="payment-methods">
+                    <h4>To'lov usuli</h4>
+                    <div class="method-list">
+                        <label class="method-item active">
+                            <input type="radio" name="payment-method" value="card" checked>
+                            <div class="method-icon">
+                                <i data-lucide="credit-card"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-title">Karta orqali</span>
+                                <span class="method-desc">Humo, UzCard, Visa</span>
+                            </div>
+                            <div class="method-check">
+                                <i data-lucide="check-circle-2"></i>
+                            </div>
+                        </label>
+                        
+                        <label class="method-item">
+                            <input type="radio" name="payment-method" value="click">
+                            <div class="method-icon click">
+                                <i data-lucide="smartphone"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-title">Click</span>
+                                <span class="method-desc">+998 90 123 45 67</span>
+                            </div>
+                            <div class="method-check">
+                                <i data-lucide="check-circle-2"></i>
+                            </div>
+                        </label>
+                        
+                        <label class="method-item">
+                            <input type="radio" name="payment-method" value="payme">
+                            <div class="method-icon payme">
+                                <i data-lucide="wallet"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-title">Payme</span>
+                                <span class="method-desc">Tez va xavfsiz</span>
+                            </div>
+                            <div class="method-check">
+                                <i data-lucide="check-circle-2"></i>
+                            </div>
+                        </label>
+                        
+                        <label class="method-item">
+                            <input type="radio" name="payment-method" value="cash">
+                            <div class="method-icon cash">
+                                <i data-lucide="banknote"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-title">Naqd pul</span>
+                                <span class="method-desc">Qabulxonada to'lash</span>
+                            </div>
+                            <div class="method-check">
+                                <i data-lucide="check-circle-2"></i>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Card Form (shown when card selected) -->
+                <div id="card-form" class="card-form">
+                    <div class="form-group">
+                        <label>Karta raqami</label>
+                        <div class="input-wrapper card-input">
+                            <i data-lucide="credit-card" class="input-icon"></i>
+                            <input type="text" id="card-number" placeholder="8600 0000 0000 0000" maxlength="19">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/100px-Visa_Inc._logo.svg.png" alt="Visa" class="card-logo" id="card-logo">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Amal qilish muddati</label>
+                            <div class="input-wrapper">
+                                <i data-lucide="calendar" class="input-icon"></i>
+                                <input type="text" id="card-expiry" placeholder="MM/YY" maxlength="5">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>CVV</label>
+                            <div class="input-wrapper">
+                                <i data-lucide="lock" class="input-icon"></i>
+                                <input type="password" id="card-cvv" placeholder="***" maxlength="3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Karta egasi</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="user" class="input-icon"></i>
+                            <input type="text" id="card-holder" placeholder="ISM FAMILIYA">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Promo Code -->
+                <div class="promo-code">
+                    <div class="promo-toggle" onclick="togglePromo()">
+                        <i data-lucide="tag"></i>
+                        <span>Promo kod bor?</span>
+                        <i data-lucide="chevron-down" class="promo-arrow"></i>
+                    </div>
+                    <div class="promo-input hidden" id="promo-input">
+                        <div class="input-wrapper">
+                            <input type="text" id="promo-code" placeholder="Promo kodni kiriting">
+                            <button class="btn btn-primary btn-sm" onclick="applyPromo()">Qo'llash</button>
+                        </div>
+                        <span class="promo-message" id="promo-message"></span>
+                    </div>
+                </div>
+                
+                <!-- Pay Button -->
+                <button class="btn btn-primary btn-full btn-glow btn-pay" onclick="processPayment()">
+                    <span id="pay-btn-text">To'lash</span>
+                    <span id="pay-btn-amount">150,000 so'm</span>
+                    <i data-lucide="arrow-right"></i>
+                </button>
+                
+                <p class="payment-security">
+                    <i data-lucide="shield-check"></i>
+                    SSL xavfsiz ulanish. Ma'lumotlaringiz himoyalangan.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Success Modal -->
+    <div id="payment-success-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content modal-celebration">
+            <div class="celebration-content">
+                <div class="celebration-icon payment-success-icon">
+                    <i data-lucide="check-circle-2"></i>
+                </div>
+                <h2 class="celebration-title">To'lov muvaffaqiyatli!</h2>
+                <p class="celebration-text">Navbatingiz tasdiqlandi</p>
+                <div class="payment-receipt">
+                    <div class="receipt-row">
+                        <span>Tranzaksiya ID</span>
+                        <strong id="receipt-id">#TRX-2026-001</strong>
+                    </div>
+                    <div class="receipt-row">
+                        <span>Sana</span>
+                        <strong id="receipt-date">29.04.2026</strong>
+                    </div>
+                    <div class="receipt-row">
+                        <span>Summa</span>
+                        <strong id="receipt-amount">150,000 so'm</strong>
+                    </div>
+                </div>
+                <div class="success-actions">
+                    <button class="btn btn-secondary btn-full" onclick="downloadReceipt()">
+                        <i data-lucide="download"></i>
+                        <span>Kvitansiyani yuklash</span>
+                    </button>
+                    <button class="btn btn-primary btn-full btn-glow" onclick="closePaymentSuccess()">
+                        <span>Tushundim</span>
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Doctor Onboarding Button (Fixed) -->
+    <button class="doctor-onboard-btn" onclick="openDoctorOnboarding()" title="Shifokor sifatida ro'yxatdan o'tish">
+        <i data-lucide="user-plus"></i>
+        <span>Shifokor bo'ling</span>
+    </button>
+
+    <!-- Doctor Detail Modal -->
+    <div id="doctor-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content modal-large">
+            <button id="close-doctor-modal" class="modal-close">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="doctor-detail-header">
+                <div class="doctor-cover"></div>
+                <div class="doctor-detail-avatar">
+                    <img id="modal-doctor-img" src="" alt="">
+                    <div class="doctor-status online" id="modal-doctor-status">
+                        <span></span>
+                        Onlayn
+                    </div>
+                </div>
+            </div>
+            <div class="doctor-detail-body">
+                <div class="doctor-detail-main">
+                    <h2 id="modal-doctor-name">Shifokor ismi</h2>
+                    <p class="doctor-detail-specialty" id="modal-doctor-specialty">Mutaxassislik</p>
+                    
+                    <div class="doctor-detail-rating">
+                        <div class="stars" id="modal-doctor-stars"></div>
+                        <span class="rating-number" id="modal-doctor-rating">5.0</span>
+                        <span class="rating-count">(<span id="modal-doctor-reviews">128</span> sharh)</span>
+                    </div>
+                    
+                    <div class="doctor-detail-info">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i data-lucide="briefcase"></i>
+                            </div>
+                            <div>
+                                <span class="info-label">Tajriba</span>
+                                <span class="info-value" id="modal-doctor-exp">15 yil</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i data-lucide="graduation-cap"></i>
+                            </div>
+                            <div>
+                                <span class="info-label">Ta'lim</span>
+                                <span class="info-value" id="modal-doctor-edu">Toshkent Tibbiyot Akademiyasi</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i data-lucide="building-2"></i>
+                            </div>
+                            <div>
+                                <span class="info-label">Shifoxona</span>
+                                <span class="info-value" id="modal-doctor-clinic">MedLife Klinikasi</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <span class="info-label">Manzil</span>
+                                <span class="info-value" id="modal-doctor-location">Toshkent, Chilonzor</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i data-lucide="clock"></i>
+                            </div>
+                            <div>
+                                <span class="info-label">Ish vaqti</span>
+                                <span class="info-value" id="modal-doctor-hours">09:00 - 18:00</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i data-lucide="wallet"></i>
+                            </div>
+                            <div>
+                                <span class="info-label">Qabul narxi</span>
+                                <span class="info-value" id="modal-doctor-price">150,000 so'm</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="doctor-detail-about">
+                        <h3>Shifokor haqida</h3>
+                        <p id="modal-doctor-about">Shifokor haqida batafsil ma'lumot...</p>
+                    </div>
+                    
+                    <div class="doctor-detail-schedule">
+                        <h3>Ish jadvali</h3>
+                        <div class="schedule-grid" id="modal-doctor-schedule">
+                            <!-- Generated by JS -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="doctor-detail-sidebar">
+                    <div class="booking-card">
+                        <h3>Navbat olish</h3>
+                        <div class="queue-info">
+                            <div class="queue-current">
+                                <span class="queue-label">Joriy navbat</span>
+                                <span class="queue-value" id="modal-queue-current">3</span>
+                            </div>
+                            <div class="queue-wait">
+                                <span class="queue-label">Kutish vaqti</span>
+                                <span class="queue-value" id="modal-queue-wait">25 daqiqa</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-full btn-glow btn-book" id="modal-book-btn">
+                            <span>Navbatga yozilish</span>
+                            <i data-lucide="calendar-plus"></i>
+                        </button>
+                        <button class="btn btn-secondary btn-full">
+                            <i data-lucide="phone"></i>
+                            <span>Qo'ng'iroq qilish</span>
+                        </button>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h3>Aloqa</h3>
+                        <div class="contact-item-modal">
+                            <i data-lucide="phone"></i>
+                            <span id="modal-doctor-phone">+998 90 123 45 67</span>
+                        </div>
+                        <div class="contact-item-modal">
+                            <i data-lucide="mail"></i>
+                            <span id="modal-doctor-email">doctor@medflow.uz</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Queue Tracker Modal -->
+    <div id="queue-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header gradient-header">
+                <button id="close-modal" class="modal-close">
+                    <i data-lucide="x"></i>
+                </button>
+                <div class="modal-title-group">
+                    <div class="modal-icon pulse-animation">
+                        <i data-lucide="bell-ring"></i>
+                    </div>
+                    <div>
+                        <h3>Navbat kuzatuvi</h3>
+                        <p>Real-time yangilanish</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-body">
+                <div class="queue-visual">
+                    <div class="queue-pulse-ring"></div>
+                    <svg class="progress-ring" viewBox="0 0 128 128">
+                        <defs>
+                            <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#3b82f6"/>
+                                <stop offset="100%" style="stop-color:#6366f1"/>
+                            </linearGradient>
+                        </defs>
+                        <circle class="progress-bg" cx="64" cy="64" r="56"/>
+                        <circle class="progress-fill" id="progress-circle" cx="64" cy="64" r="56"/>
+                    </svg>
+                    <div class="queue-number">
+                        <span id="queue-position">0</span>
+                        <small>navbat</small>
+                    </div>
+                </div>
+                
+                <div class="queue-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Shifokor</span>
+                        <span class="detail-value" id="modal-doctor">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Mutaxassislik</span>
+                        <span class="detail-value" id="modal-specialty">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Taxminiy vaqt</span>
+                        <span class="detail-value emerald" id="modal-time">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Telefon</span>
+                        <span class="detail-value" id="modal-phone">-</span>
+                    </div>
+                </div>
+                
+                <div class="notification-settings">
+                    <div class="notification-toggle">
+                        <div class="toggle-info">
+                            <div class="toggle-icon">
+                                <i data-lucide="bell"></i>
+                            </div>
+                            <div>
+                                <span class="toggle-title">Bildirishnomalar</span>
+                                <span class="toggle-desc">SMS va push-xabarnomalar</span>
+                            </div>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="notification-toggle" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="notification-toggle">
+                        <div class="toggle-info">
+                            <div class="toggle-icon">
+                                <i data-lucide="volume-2"></i>
+                            </div>
+                            <div>
+                                <span class="toggle-title">Ovozli xabarnoma</span>
+                                <span class="toggle-desc">Navbat kelganda ovoz chiqarish</span>
+                            </div>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="sound-toggle" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div id="queue-alert" class="queue-alert hidden">
+                    <div class="alert-icon">
+                        <i data-lucide="check-circle-2"></i>
+                    </div>
+                    <div class="alert-content">
+                        <p class="alert-title">Navbatingiz keldi!</p>
+                        <p class="alert-desc">Iltimos, qabulxonaga o'ting</p>
+                    </div>
+                </div>
+                
+                <div id="queue-success" class="queue-success hidden">
+                    <div class="success-animation">
+                        <div class="success-checkmark">
+                            <i data-lucide="check"></i>
+                        </div>
+                    </div>
+                    <h3 class="success-title">Siz muvaffaqiyatli tekshirildingiz!</h3>
+                    <p class="success-desc">Rahmat! Shifokor sizni qabul qildi. Sog'lig'ingizni asrang.</p>
+                    <div class="success-actions">
+                        <button class="btn btn-secondary btn-full" onclick="closeQueueModal()">
+                            <i data-lucide="file-text"></i>
+                            <span>Tibbiy xulosa olish</span>
+                        </button>
+                        <button class="btn btn-primary btn-full btn-glow" onclick="rateDoctor()">
+                            <i data-lucide="star"></i>
+                            <span>Shifokorni baholash</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Celebration Modal -->
+    <div id="celebration-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content modal-celebration">
+            <div class="celebration-content">
+                <div class="celebration-icon">
+                    <i data-lucide="party-popper"></i>
+                </div>
+                <h2 class="celebration-title">Tabriklaymiz!</h2>
+                <p class="celebration-text">Siz muvaffaqiyatli navbatga yozildingiz</p>
+                <div class="celebration-details">
+                    <div class="celebration-item">
+                        <i data-lucide="user"></i>
+                        <span id="celebration-doctor">Dr. Azizov</span>
+                    </div>
+                    <div class="celebration-item">
+                        <i data-lucide="clock"></i>
+                        <span id="celebration-time">14:30</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-full btn-glow" onclick="closeCelebration()">
+                    <span>Tushundim</span>
+                    <i data-lucide="arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rating Modal -->
+    <div id="rating-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" onclick="closeRatingModal()">
+                    <i data-lucide="x"></i>
+                </button>
+                <h3>Shifokorni baholang</h3>
+            </div>
+            <div class="modal-body">
+                <div class="rating-stars-input">
+                    <button class="star-btn" data-rating="1"><i data-lucide="star"></i></button>
+                    <button class="star-btn" data-rating="2"><i data-lucide="star"></i></button>
+                    <button class="star-btn" data-rating="3"><i data-lucide="star"></i></button>
+                    <button class="star-btn" data-rating="4"><i data-lucide="star"></i></button>
+                    <button class="star-btn" data-rating="5"><i data-lucide="star"></i></button>
+                </div>
+                <div class="form-group">
+                    <label>Sharhingiz</label>
+                    <textarea rows="4" placeholder="Tajribangiz haqida yozing..."></textarea>
+                </div>
+                <button class="btn btn-primary btn-full btn-glow" onclick="submitRating()">
+                    <span>Baholash</span>
+                    <i data-lucide="send"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">
+        <div class="toast-content">
+            <div class="toast-icon-wrapper">
+                <i data-lucide="check-circle-2" class="toast-icon"></i>
+            </div>
+            <div class="toast-body">
+                <span id="toast-message">Muvaffaqiyatli!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas" class="confetti-canvas"></canvas>
+
+    <!-- Voice Notification System -->
+<div id="voice-notification" class="voice-notification hidden">
+    <div class="voice-wave">
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <p id="voice-text">Navbatingiz keldi!</p>
+</div>
+
+<!-- How It Works Video Modal -->
+<div id="video-modal" class="modal hidden">
+    <div class="modal-overlay" onclick="closeVideoModal()"></div>
+    <div class="modal-content modal-video">
+        <button class="modal-close" onclick="closeVideoModal()">
+            <i data-lucide="x"></i>
+        </button>
+        <div class="video-container">
+            <div class="video-placeholder">
+                <i data-lucide="play-circle"></i>
+                <h3>Qanday ishlaydi?</h3>
+                <p>Video tez orada yuklanadi...</p>
+                <div class="video-steps">
+                    <div class="video-step">
+                        <div class="step-num">1</div>
+                        <span>Shifokor tanlang</span>
+                    </div>
+                    <div class="video-step">
+                        <div class="step-num">2</div>
+                        <span>Navbat oling</span>
+                    </div>
+                    <div class="video-step">
+                        <div class="step-num">3</div>
+                        <span>Kuting va kiring</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="script.js"></script>
+</html>
